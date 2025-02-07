@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>President Andrew Johnson</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>President Andrew Johnson</h1>
+        <p>A look into his life, presidency, and legacy</p>
+    </header>
+
+    <section class="container">
+        <!-- Early Life & Education -->
+        <div class="section" id="earlyLife" onclick="toggleSection('earlyLifeContent')">
+            <h2>1️⃣ Early Life & Education</h2>
+            <div id="earlyLifeContent" class="content">
+                <p><strong>Born:</strong> December 29, 1808, in Raleigh, NC.</p>
+                <p><strong>Family:</strong> Son of poor laborers, grew up in poverty.</p>
+                <p><strong>Education:</strong> Self-taught; little formal schooling.</p>
+                <p><strong>Career before politics:</strong> Tailor, later opened his own shop.</p>
+                <p><strong>Shaping beliefs:</strong> Experience with poverty shaped his populist views.</p>
+            </div>
+        </div>
+
+        <!-- Political Alignment & Election -->
+        <div class="section" id="politicalAlignment" onclick="toggleSection('politicalAlignmentContent')">
+            <h2>2️⃣ Political Alignment & Election</h2>
+            <div id="politicalAlignmentContent" class="content">
+                <p><strong>Party:</strong> Democratic, then National Union Party.</p>
+                <p><strong>Platform:</strong> Unionism, lenient Reconstruction.</p>
+                <p><strong>Context:</strong> Civil War; a Southern Unionist figure.</p>
+                <p><strong>Election:</strong> Won with Lincoln against McClellan.</p>
+                <p><strong>Result:</strong> Landslide victory with 212 electoral votes.</p>
+            </div>
+        </div>
+
+        <!-- Presidency -->
+        <div class="section" id="presidency" onclick="toggleSection('presidencyContent')">
+            <h2>3️⃣ Presidency</h2>
+            <div id="presidencyContent" class="content">
+                <p><strong>Accomplishments:</strong> 13th Amendment, Alaska purchase.</p>
+                <p><strong>Challenges:</strong> Clashed with Congress over Reconstruction.</p>
+                <p><strong>Famous for:</strong> Impeachment, lenient South Reconstruction.</p>
+                <p><strong>Controversies:</strong> Vetoed civil rights bills, impeached.</p>
+                <p><strong>Term:</strong> Did not win a second term in 1868.</p>
+            </div>
+        </div>
+
+        <!-- Life After Presidency -->
+        <div class="section" id="afterPresidency" onclick="toggleSection('afterPresidencyContent')">
+            <h2>4️⃣ Life After Presidency</h2>
+            <div id="afterPresidencyContent" class="content">
+                <p><strong>Post-office:</strong> Returned to Tennessee, re-entered politics.</p>
+                <p><strong>Re-elected:</strong> Became U.S. Senator in 1875.</p>
+                <p><strong>Death:</strong> Died July 31, 1875, of a stroke.</p>
+            </div>
+        </div>
+
+        <!-- Multimedia & Citations -->
+        <div class="section" id="citations" onclick="toggleSection('citationsContent')">
+            <h2>5️⃣ Multimedia & Citations</h2>
+            <div id="citationsContent" class="content">
+                <p><strong>Resources:</strong> Library of Congress, National Archives.</p>
+                <p><strong>Visuals:</strong> Images, political cartoons, videos of impeachment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to top button -->
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+    <footer>
+        <p>© 2025 Andrew Johnson Historical Website</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
