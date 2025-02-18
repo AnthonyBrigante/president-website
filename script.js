@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Array of 20 best fun facts about Andrew Johnson
+// Array of fun facts (only one has an image)
 const funFacts = [
     "Andrew Johnson was the only U.S. president who never attended school. His wife, Eliza, helped him learn to read and write.",
     "Johnson started his career as a tailor and even made his own suits while in office.",
@@ -20,7 +20,7 @@ const funFacts = [
     "He delivered an inaugural speech while drunk at his vice-presidential inauguration.",
     "He didn't have a middle name",
     "Johnson’s impeachment was largely due to his firing of Secretary of War Edwin Stanton.",
-    "He opposed the Fourteenth Amendment, which granted citizenship to formerly enslaved people.",
+     "He opposed the Fourteenth Amendment, which granted citizenship to formerly enslaved people.",
     "Johnson vetoed the Civil Rights Act of 1866, but Congress overrode his veto—the first time in U.S. history that happened.",
     "He refused to attend the inauguration of his successor, Ulysses S. Grant.",
     "Andrew Johnson granted amnesty to thousands of former Confederates.",
@@ -42,12 +42,16 @@ const funFacts = [
     "Johnson was buried with a copy of the U.S. Constitution wrapped around his body as a final statement of his beliefs.",
     "HAHA, Johnson",
     "He didn't get to play golf with James Carmichael",
+    {
+        text: "Johnson was buried with a copy of the U.S. Constitution wrapped around his body as a final statement of his beliefs.",
+        image: "images/constitution_burial.jpg"
+    }
 ];
 
-// Function to display a random fact when button is clicked
+// Function to display a random fact
 document.addEventListener("DOMContentLoaded", function () {
     const mainContent = document.querySelector("main");
-    
+
     const button = document.createElement("button");
     button.textContent = "Click for a Fun Fact";
     button.style.display = "block";
@@ -58,11 +62,32 @@ document.addEventListener("DOMContentLoaded", function () {
     factDisplay.style.textAlign = "center";
     factDisplay.style.fontWeight = "bold";
 
+    const factImage = document.createElement("img");
+    factImage.style.display = "none"; // Hide image by default
+    factImage.style.margin = "10px auto";
+    factImage.style.maxWidth = "100%";
+    factImage.style.height = "auto";
+    factImage.style.borderRadius = "10px";
+    factImage.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+
     button.addEventListener("click", function () {
         const randomIndex = Math.floor(Math.random() * funFacts.length);
-        factDisplay.textContent = funFacts[randomIndex];
+        const selectedFact = funFacts[randomIndex];
+
+        if (typeof selectedFact === "object") {
+            // If the fact includes an image
+            factDisplay.textContent = selectedFact.text;
+            factImage.src = selectedFact.image;
+            factImage.alt = "Fun Fact Image";
+            factImage.style.display = "block";
+        } else {
+            // If it's just a text fact
+            factDisplay.textContent = selectedFact;
+            factImage.style.display = "none";
+        }
     });
 
     mainContent.appendChild(button);
     mainContent.appendChild(factDisplay);
+    mainContent.appendChild(factImage);
 });
