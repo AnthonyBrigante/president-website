@@ -43,7 +43,9 @@ const funFacts = [
     "He was a racist.",
     "Johnson was buried with a copy of the U.S. Constitution wrapped around his body as a final statement of his beliefs.",
     "HAHA, Johnson",
-    "He didn't get to play golf with James Carmichael"
+    "He didn't get to play golf with James Carmichael",
+     "He kept a family of mice inside of the white house and gave them food and water",
+      "He wore pants most of the time"
 ];
 
 // Function to display a random fact
