@@ -46,7 +46,7 @@ const funFacts = [
     "He didn't get to play golf with James Carmichael",
     {
         text: "Look at this.",
-        image: "images/naked-mole-rat.jpg" // Corrected filename (removed spaces)
+        image: "images/naked-mole-rat.jpg"
     }
 ];
 
