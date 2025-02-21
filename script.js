@@ -43,8 +43,8 @@ const funFacts = [
     "HAHA, Johnson",
     "He didn't get to play golf with James Carmichael",
     {
-        text: "Johnson was buried with a copy of the U.S. Constitution wrapped around his body as a final statement of his beliefs.",
-        image: "images/mole rat.webp"
+        text: "Look at this.",
+        image: "images/mole_rat.webp"
     }
 ];
 
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // If the fact includes an image
             factDisplay.textContent = selectedFact.text;
             factImage.src = selectedFact.image;
-            factImage.alt = "";
+            factImage.alt = "A mole rat";
             factImage.style.display = "block";
         } else {
             // If it's just a text fact
